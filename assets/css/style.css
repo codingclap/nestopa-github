@@ -1,0 +1,151 @@
+/* ============================================= */
+/* ============ GLOBAL STYLES ================== */
+/* ============================================= */
+* {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box; 
+}
+h1,h2,h3,h4,h5,h6,p{
+     margin: 0px!important;
+}
+body {
+     font-family: 'inter-regular';
+     background-color: #1B1E27;
+}
+.line-break{
+     display: block;
+}
+.button-style{
+     text-decoration: none;
+     padding: 18px 30px; 
+     background-color:#0080FE;
+     color: #fff;
+     width: 100%;
+     max-width: 300px;
+     font-size: 15px;
+    line-height: normal;
+}
+
+@font-face {
+     font-family: "inter-thin";
+     src: url('../fonts/Inter_18pt-Thin.ttf');
+}
+
+@font-face {
+     font-family: "inter-light";
+     src: url('../fonts/Inter_18pt-Light.ttf');
+}
+
+@font-face {
+     font-family: "inter-regular";
+     src: url('../fonts/Inter_18pt-Regular.ttf');
+}
+
+@font-face {
+     font-family: "inter-medium";
+     src: url('../fonts/Inter_18pt-Medium.ttf');
+}
+
+@font-face {
+     font-family: "inter-bold";
+     src: url('../fonts/Inter_18pt-Bold.ttf');
+}
+
+@font-face {
+     font-family: "inter-semibold";
+     src: url('../fonts/Inter_18pt-SemiBold.ttf');
+}
+
+@font-face {
+     font-family: "inter-extrabold";
+     src: url('../fonts/Inter_18pt-ExtraBold.ttf');
+}
+
+@font-face {
+     font-family: "franklin-regular";
+     src: url('../fonts/Franklin-Gothic-Book-Regular.ttf');
+}
+
+[font-style="franklin-regular"] {
+     font-family: "franklin-regular";
+}
+[font-style="inter-bold"] {
+     font-family: "inter-bold";
+}
+[font-style="inter-extrabold"] {
+     font-family: "inter-extrabold";
+}
+
+[font-color="white"] {
+    color:#fff;
+}
+[font-color="blue"] {
+     color:#0080FE;
+ }
+[font-color="darkBlue"] {
+     color:#1B1E27;
+ }
+ 
+/* ============================================= */
+/* ============ HEADER STYLES ================== */
+/* ============================================= */
+
+.header-bg {
+     background-image: url('../images/header-bg.jpg');
+     height: 100vh; 
+     background-size: cover;
+}
+
+.bg-transparent {
+     transition: all 0.2s ease-in-out;
+}
+
+.nav-dark {
+     background-color: #1B1E27 !important;
+     backdrop-filter: blur(10px) !important;
+     transition: all 0.2s ease-in-out;
+}
+
+.navbar-light .navbar-nav {
+     /* gap:15px; */
+}
+
+.navbar-light .navbar-nav .nav-link {
+     font-family: "inter-light";
+     color: #fff;
+     font-weight: 100;
+     font-size: 16px;
+}
+
+.header .hero-banner-content {
+     padding-top: 90px;
+}
+.header .hero-banner-content .superText{
+     font-size: clamp(1.2rem, 3vw, 2.5rem);
+     line-height:normal; 
+}
+.header .hero-banner-content .heading{
+     font-size: clamp(2rem, 4vw, 4rem);
+     line-height:normal;  
+}
+.header .hero-banner-content .subHeading{
+     font-size: clamp(1.1rem, 2.6vw, 2.2rem);
+     line-height:normal; 
+     font-style: italic; 
+}
+
+
+
+
+@media(max-width:1200px){
+     .line-break{
+          display: inline;
+     }
+}
+
+@media (max-width:991px){
+    .header-bg{
+          height: 100%;
+     }
+}
