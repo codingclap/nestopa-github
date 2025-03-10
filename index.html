@@ -31,9 +31,12 @@
                <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent fixed-top pt-2 py-lg-4">
                     <div class="container">
                          <img src="assets/images/nestopa-logo.png" alt="">
-                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#navbarNav">
-                              <span class="navbar-toggler-icon"></span>
+                         <button class="navbar-toggler collapsed" id="nav-toggle" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                              <!-- <span class="navbar-toggler-icon"></span> -->
+                              <span class="navbar-toggler-bar"></span>
+                              <span class="navbar-toggler-bar"></span>
+                              <span class="navbar-toggler-bar"></span>
                          </button>
                          <div class="collapse navbar-collapse" id="navbarNav">
                               <ul class="navbar-nav ms-auto gap-0 gap-lg-3">
@@ -52,12 +55,18 @@
                     <div class="container">
                          <div class="row align-items-center">
                               <div class="col-12 col-lg-6">
-                                   <span class="superText" font-color="white" font-style="franklin-regular">From Search to Sold</span>
-                                   <h2 class="heading my-2" font-style="inter-bold" font-color="white">Supercharge Your <span font-color="blue">Real Estat e SEO</span></h2>
-                                   <p class="subHeading mt-2 mt-lg-3 mb-3 mb-lg-5" font-style="inter-extrabold" font-color="white">Get the Property Marketing <span class="line-break">Experts on your team</span></p>
-                                  
-                                    <a class="button-style d-flex justify-content-center mb-4 mb-lg-1" font-style="inter-bold" href="">FREE SEO STRATEGY</a>
-                                    
+                                   <span class="superText" font-color="white" font-style="franklin-regular">From Search
+                                        to Sold</span>
+                                   <h2 class="heading my-2" font-style="inter-bold" font-color="white">Supercharge Your
+                                        <span font-color="blue">Real Estat e SEO</span>
+                                   </h2>
+                                   <p class="subHeading mt-2 mt-lg-3 mb-3 mb-lg-5" font-style="inter-extrabold"
+                                        font-color="white">Get the Property Marketing <span class="line-break">Experts
+                                             on your team</span></p>
+
+                                   <a class="button-style d-flex justify-content-center mb-4 mb-lg-1"
+                                        font-style="inter-bold" href="">FREE SEO STRATEGY</a>
+
                               </div>
                               <div class="col-12 col-lg-6 pb-4 pb-lg-1">
                                    <div class="hero-image">
@@ -112,16 +121,38 @@
 
           <script>
                let nav = document.querySelector('nav');
+               let navToggle = document.querySelector('#nav-toggle');
+
                window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 20) {
+                    if (navToggle.classList.contains('collapsed')) {
+                         if (window.pageYOffset > 20) {
+                              nav.classList.add('nav-dark', 'shadow');
+                              nav.classList.remove('bg-transparent');
+                              nav.classList.remove('bg-light');
+                         } else {
+                              nav.classList.remove('nav-dark', 'shadow');
+                              nav.classList.add('bg-transparent');
+                              nav.classList.add('bg-light');
+                         }
+                    }else{
+                         if (window.pageYOffset > 20) {
+                              nav.classList.add('nav-dark', 'shadow');
+                              nav.classList.remove('bg-transparent');
+                              nav.classList.remove('bg-light');
+                         }
+                    }
+               })
+
+
+               navToggle.addEventListener('click', () => {
+                    if (navToggle.classList.contains('collapsed')) {
+                         
+                    } else {
                          nav.classList.add('nav-dark', 'shadow');
                          nav.classList.remove('bg-transparent');
                          nav.classList.remove('bg-light');
-                    } else {
-                         nav.classList.remove('nav-dark', 'shadow');
-                         nav.classList.add('bg-transparent');
-                         nav.classList.add('bg-light');
                     }
+
                })
           </script>
      </body>
