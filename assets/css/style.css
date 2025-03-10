@@ -113,13 +113,13 @@ body {
 }
 
 .bg-transparent {
-     transition: all 0.2s ease-in-out;
+     transition: all 0.1s ease-in-out;
 }
 
 .nav-dark {
      background-color: #1B1E27 !important;
      backdrop-filter: blur(10px) !important;
-     transition: all 0.2s ease-in-out;
+     transition: all 0.1s ease-in-out;
 }
 
 .navbar-light .navbar-nav {

@@ -134,19 +134,19 @@
                               nav.classList.add('bg-transparent');
                               nav.classList.add('bg-light');
                          }
-                    }else{
-                         if (window.pageYOffset > 20) {
-                              nav.classList.add('nav-dark', 'shadow');
-                              nav.classList.remove('bg-transparent');
-                              nav.classList.remove('bg-light');
-                         }
+                    } else {
+
                     }
                })
 
 
                navToggle.addEventListener('click', () => {
                     if (navToggle.classList.contains('collapsed')) {
-                         
+                         if (window.pageYOffset < 20) {
+                              nav.classList.remove('nav-dark', 'shadow');
+                              nav.classList.add('bg-transparent');
+                              nav.classList.add('bg-light');
+                         }
                     } else {
                          nav.classList.add('nav-dark', 'shadow');
                          nav.classList.remove('bg-transparent');
